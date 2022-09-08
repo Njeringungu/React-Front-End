@@ -1,1 +1,7 @@
 
+
+.container{
+    border-radius: 10px;
+    border-color: brown;
+    background-color: blue;
+}
