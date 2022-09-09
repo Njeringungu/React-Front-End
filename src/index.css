@@ -1,7 +1,30 @@
 
 
 .container{
-    border-radius: 10px;
+    border-radius: 5px;
     border-color: brown;
-    background-color: blue;
+    background-color: rgb(114, 114, 139);
+    width: 5cm;
+    
+}
+
+.navbar{
+    padding-top: 10px;
+    
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10cm ;
+    
+}
+
+.form{
+    font-size: 25px;
+    width: 400px;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
 }
