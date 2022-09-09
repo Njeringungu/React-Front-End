@@ -1,4 +1,6 @@
-function Patient(){
+import React from "react";
+
+function Patient({array}){
 
     return(
         <div></div>
