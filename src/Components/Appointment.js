@@ -7,7 +7,7 @@ function Appointment(){
     
     patient_id:"",
     doctor_name:"",
-    date:"",
+    date:""
     })
     
     function handleSubmit(e){

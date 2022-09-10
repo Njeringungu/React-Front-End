@@ -11,20 +11,31 @@
 .navbar{
     padding-top: 10px;
     
-    padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 10cm ;
-    
+
+    float:left;
+  padding:10px;
+  background: #15172b;
+  text-align: center;
+  margin-left:5px;
 }
 
 .form{
-    font-size: 25px;
-    width: 400px;
+    font-size: 10px;
+    color: white;
     margin: 0.5rem;
     display: flex;
     flex-direction: column;
+    background-color: #15172b;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 200px;
+  padding: 20px;
+  width: 320px;
+  align-items: center;
 }
