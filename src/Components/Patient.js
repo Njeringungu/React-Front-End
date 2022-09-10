@@ -29,7 +29,14 @@ useEffect(() => {
 function handleChange(e){
     setPatient({...patient, [e.target.name]:e.target.value})
 }
-
+function handleDelete(e){
+    let id= e.target.id;
+    fetch(`http://localhost:4500/patients/${id}`,{
+        method:"DELETE"
+    })
+    .then((response)=>response.json())
+    .then(deletedApp=>onRemove(deletedApp))
+}
 
 function onRemove (deleteApp){
     setPatients(patients.filter(patient=>patient.id!==deleteApp.id))
