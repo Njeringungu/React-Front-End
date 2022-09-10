@@ -6,9 +6,9 @@ function Doctor(){
      const[remove,setOnRemove]=useState(true)
 
     useEffect(() => {
-        fetch("http://localhost:4500/appointments")
+        fetch("http://localhost:4500/appointments/patients/doctors")
         .then((response) =>response.json())
-        .then((appointments) =>setAppointments (appointments) );
+        .then((appointments) =>setAppointments(appointments) );
     }, [remove]);
     
 let array = (
@@ -16,8 +16,17 @@ let array = (
        <div >
         <div className="container" key={x.id}>
         <p>Patient Id: {x.patient_id}</p>
+        
         <p>Doctor Id: {x.doctor_id}</p>
+        
         <p>Date: {x.date}</p>
+        
+         {/* <p>Patient Name: {x.patient.name}</p>  */}
+        
+          {/* <p>Doctor Name: {x.doctors.name}</p> 
+        <p>Doctor Speciality: {x.doctors.speciality}</p> 
+          
+          */}
         <button id={x.id} onClick={handleDelete}>Delete</button>
         </div>
        </div> 

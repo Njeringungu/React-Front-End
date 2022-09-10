@@ -1,16 +1,13 @@
-import React,{useEffect,useState} from "react";
-import Doctor from "./Doctor";
+import React,{useState} from "react";
 
-function Appointment({array}){
-    
-    function handleChange(e){
-        setAppointments({...appointments, [e.target.name]:e.target.value})
-      }
-    const[appointments,setAppointments]=useState({
+
+function Appointment(){
+
+  const[appointments,setAppointments]=useState({
     
     patient_id:"",
-    doctor_id:"",
-    Date:"",
+    doctor_name:"",
+    date:"",
     })
     
     function handleSubmit(e){
@@ -25,8 +22,10 @@ function Appointment({array}){
     .then(response=>response.json())
     .then (appointment=>(appointment) )
     }
-
    
+    function handleChange(e){
+        setAppointments({...appointments, [e.target.id]:e.target.value})
+      }
 
 return(
     <>
@@ -35,16 +34,15 @@ return(
   <form className="form" onSubmit={handleSubmit}>
 
   <label htmlFor="name">Patients Name</label>
-    <input type="text" name="Name" value={appointments.patient_id} onChange={handleChange}/>
+    <input type="number" id="patient_id" value = {appointments.patient_id} onChange={ ( e ) => handleChange( e ) }/>
 
   <label htmlFor="name">Doctors Name</label>
-    <input type="text" name="Name" value = {appointments.doctor_id} onChange={handleChange}/>
+    <input type="number" id="doctor_id" value = {appointments.doctor_id} onChange={ ( e ) => handleChange( e ) }/>
 
     <label htmlFor="date">Date</label>
-        <input type="text" name=" date"  />
+        <input type="date" id="date" value={appointments.date} onChange = { ( e ) => handleChange( e ) } />
 
-
- <input type="submit" value="Submit" />
+<input type="submit" value="Submit" />
   </form>
   
   
