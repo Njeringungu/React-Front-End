@@ -32,21 +32,37 @@
   background: grey;
 }
 
+.appointment{
+  text-align: center;
+}
+
 .form{
+
     font-size: 10px;
     color: white;
     margin: 0.5rem;
     display: flex;
     flex-direction: column;
     background-color: #15172b;
-  border-radius: 20px;
-  box-sizing: border-box;
-  height: 200px;
-  padding: 20px;
-  width: 320px;
-  align-items: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 200px;
+    padding: 20px;
+    width: 320px;
+    align-items: center;
+}
+.formcard{
+  display: flex;
+  justify-content: space-around;
 }
 .doctorCard{
-
+  color: white;
   background-color: #15172b;
+  padding: 10px;
+  border-radius: 5px;
+}
+.doctorCard li{
+  padding-bottom: 10px;
+  text-align: left;
+
 }
