@@ -6,15 +6,12 @@
     background-color: rgb(114, 114, 139);
     width: 5cm;
     flex-direction: column;
-   
-grid-auto-flow: column;
-grid-column-gap: 10px;
-  
-color: #15172b;
-
-margin: left 5cm;
-margin: 10pxcm;
-padding-left:70px; 
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+    color: #15172b;
+    margin: left 5cm;
+    margin: 10pxcm;
+    padding-left:70px; 
 }
 .navbar{
     padding-top: 10px;
