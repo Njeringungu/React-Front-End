@@ -48,21 +48,27 @@ return(
     
         <card className="doctorCard">
           <h2>Our Doctors</h2>
-              <li>Id:1,
-                <br/>Name:Michael Wafula,<br/>
-              Speciaulty:Dentist</li>
+              <ul>Id:1,
+                Name:Michael Wafula,
+             Speciality:Dentist</ul>
               
-              <li>Id:2,
-                <br/>Name:Lucy Atieno,<br/>
-              Speciaulty: Dermatologist</li>
+      <ul>
+        Id:2,
+        Name:Lucy Atieno,
+        Speciality: Dermatologist
+      </ul>
               
-              <li> Id:3,
-                <br/>Name: Jane Wangui,<br/>
-              Speciaulty: ENT</li>
+      <ul> 
+        Id:3,
+        Name: Jane Wangui,
+        Speciality: ENT
+      </ul>
             
-              <li>Id:4,<br/>
-              Name:James Mogaka,<br/>
-              Speciaulty:Optician</li>
+       <ul>
+          Id:4,
+          Name:James Mogaka,
+          Speciality:Optician
+        </ul>
                 
         </card>
       </div>
