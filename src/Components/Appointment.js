@@ -47,7 +47,7 @@ return(
         </form>
     
         <card className="doctorCard">
-          <h2>Our Doctors</h2>
+          <h3>Our Doctors</h3>
               <ul>Id:1,
                 Name:Michael Wafula,
              Speciality:Dentist</ul>
