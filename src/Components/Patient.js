@@ -3,10 +3,8 @@ import React,{useEffect,useState} from "react";
 function Patient(){
     const[patients,setPatients] = useState([])
     const[remove,setOnRemove]=useState(true)
-    const[patient,setPatient]= useState({
+    const[patientName,setPatientName]= useState({name:"" })
 
-    name:""
-})
 //fetch(patients)
 useEffect(() => {
         fetch("http://localhost:4500/patients")
@@ -23,14 +21,14 @@ function handleSubmit(e){
         headers:
         {
             "Content-Type":"application/json"
-        }, body: JSON.stringify(patient)
+        }, body: JSON.stringify(patientName)
 
     })
     .then(response => response.json())
     .then (patient=> (patient))
 }
 function handleChange(e){
-    setPatient({...patient, [e.target.name]:e.target.value})
+    setPatientName({...patientName, [e.target.name]:e.target.value})
 }
 
 //Delete(patients)
@@ -60,7 +58,7 @@ return(
          ))}
     <form onSubmit={handleSubmit}>
          <label htmlFor="name">Patient Name:</label> 
-         <input type="text" name="patient" value={patients.name} onChange = { ( e ) => handleChange( e ) }/>
+         <input type="text" name="name" value={patientName.name} onChange = { ( e ) => handleChange( e ) }/>
          <input type="submit" value="Submit" />
     </form> 
            
