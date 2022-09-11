@@ -16,9 +16,10 @@ function App(){
            <NavBar/> 
            
            <Routes>
+           <Route exact path="/" element={<Appointment/>}/>
             <Route exact path="/patient" element={<Patient/>}/>
             <Route exact path="/doctor" element={<Doctor/>}/>
-            <Route exact path="/" element={<Appointment/>}/>
+            
            </Routes>
         </div>
     )
