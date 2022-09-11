@@ -4,6 +4,7 @@ function Patient(){
     const[patients,setPatients] = useState([])
     const[remove,setOnRemove]=useState(true)
     const[patientName,setPatientName]= useState({name:"" })
+const [search,setSearch]=useState("")
 
 //fetch(patients)
 useEffect(() => {
@@ -12,6 +13,10 @@ useEffect(() => {
         .then((patients) =>setPatients(patients) );
     }, [remove]);
 
+function displayPatient(){
+    setSearch(patients.filter((patient)=>
+patient.name.include))
+}
 
 //post(patients)
 function handleSubmit(e){
@@ -51,6 +56,7 @@ return(
      {  patients.map(patient=>(
             
          <div className="container" key={patient.id}>
+            <p>Patient Name: {patient.id}</p>
             <p>Patient Name: {patient.name}</p>
             <button id={patient.id} onClick={handleDelete}>Delete</button>
          </div>
@@ -61,7 +67,10 @@ return(
          <input type="text" name="name" value={patientName.name} onChange = { ( e ) => handleChange( e ) }/>
          <input type="submit" value="Submit" />
     </form> 
-           
+         <form onSubmit={handleSubmit}>
+         <label htmlFor="name">Search:</label> 
+         
+            </form>  
         </div>
     )
    

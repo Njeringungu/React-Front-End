@@ -5,7 +5,7 @@ function Doctor(){
 
     const[appointments,setAppointments] = useState([])
     const[remove,setOnRemove]=useState(true)
-   
+   const[show,setShow]= useState(false)
 
     useEffect(() => {
         fetch("http://localhost:4500/appointments/patients/doctors")
@@ -21,7 +21,7 @@ let array = (appointments.map((x)=>(
         <p>Patient Id: {x.patient_id}</p>
         <p>Doctor Id: {x.doctor_id}</p>
          <p>Date: {x.date}</p>
-       
+         
         <button id={x.id} onClick={handleDelete}>Delete</button>
     </div>
 
@@ -49,9 +49,9 @@ function onRemove (deleteApp){
     }
 
     return(
-        <div>
-            {array}
-        </div>
+    <>
+        {array}
+       </>
     )
 }
 
