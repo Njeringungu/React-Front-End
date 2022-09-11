@@ -53,24 +53,25 @@ function onRemove (deleteApp){
 }
 return(
     <div >
-     {  patients.map(patient=>(
-            
-         <div className="container" key={patient.id}>
-            <p>Patient Name: {patient.id}</p>
-            <p>Patient Name: {patient.name}</p>
-            <button id={patient.id} onClick={handleDelete}>Delete</button>
-         </div>
-
-         ))}
-    <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
          <label htmlFor="name">Patient Name:</label> 
          <input type="text" name="name" value={patientName.name} onChange = { ( e ) => handleChange( e ) }/>
          <input type="submit" value="Submit" />
     </form> 
-         <form onSubmit={handleSubmit}>
+     {  patients.map(patient=>(
+        
+            <div className="container" key={patient.id}>
+                <p>Patient Name: {patient.id}</p>
+                <p>Patient Name: {patient.name}</p>
+                <button id={patient.id} onClick={handleDelete}>Delete</button>
+            </div>
+        
+         ))}
+    
+         {/* <form onSubmit={handleSubmit}>
          <label htmlFor="name">Search:</label> 
          
-            </form>  
+            </form>   */}
         </div>
     )
    
