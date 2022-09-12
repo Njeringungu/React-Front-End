@@ -12,7 +12,7 @@ function Appointment(){
     
     function handleSubmit(e){
       e.preventDefault()
-      fetch("http://localhost:4500/appointments",{
+      fetch("https://mydoc-appointment-app.herokuapp.com/appointments",{
         method:"POST",
         headers:
     {

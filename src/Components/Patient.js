@@ -8,7 +8,7 @@ function Patient(){
 
 //fetch(patients)
 useEffect(() => {
-        fetch("http://localhost:4500/patients")
+        fetch("https://mydoc-appointment-app.herokuapp.com/patients")
         .then((response) =>response.json())
         .then((patients) =>setPatients(patients) );
     }, [remove]);
@@ -18,7 +18,7 @@ useEffect(() => {
 //post(patients)
 function handleSubmit(e){
     e.preventDefault()
-    fetch("http://localhost:4500/patients",{
+    fetch("https://mydoc-appointment-app.herokuapp.com/patients",{
         method:"POST",
         headers:
         {
@@ -36,7 +36,7 @@ function handleChange(e){
 //Delete(patients)
 function handleDelete(e){
 let id= e.target.id;
-    fetch(`http://localhost:4500/patients/${id}`,{
+    fetch(`https://mydoc-appointment-app.herokuapp.com/patients${id}`,{
         method:"DELETE"
     })
     .then((response)=>response.json())
