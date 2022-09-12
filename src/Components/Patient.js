@@ -58,7 +58,7 @@ return(
      {  patients.map(patient=>(
         
             <div className="container" key={patient.id}>
-                <p>Patient Name: {patient.id}</p>
+                <p>Patient Id: {patient.id}</p>
                 <p>Patient Name: {patient.name}</p>
                 <button id={patient.id} onClick={handleDelete}>Delete</button>
             </div>
